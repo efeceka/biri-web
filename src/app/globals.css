@@ -2,12 +2,14 @@
 
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Senin gradientin */
   background: linear-gradient(to right, #cbfdd8, #95bafe);
-  /* iOS “bounce” sırasında da gradient görünsün */
-  background-attachment: fixed;
+  background-attachment: fixed; /* scroll’da arkada sabit kalsın */
 }
 
-/* iOS Safari overscroll gölgesi/boşluğu azaltır (opsiyonel) */
+/* Overscroll bounce rengini de kontrol et (Safari) */
 html, body {
-  overscroll-behavior-y: none;
+  overscroll-behavior: none;
 }

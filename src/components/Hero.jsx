@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen bg-gradient-to-r from-[#cbfdd8] to-[#95bafe] pt-30 lg:pt-24 overflow-hidden">
       {/* İçerik container */}
-      <div className="relative max-w-[1440px] mx-auto h-full px-6 lg:px-20">
+      <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
         {/* Metin blok */}
         <div className="h-full flex items-start lg:items-center">
           <div className="max-w-lg mx-auto lg:ml-20 text-center lg:text-center z-10

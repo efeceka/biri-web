@@ -26,7 +26,7 @@ export default function Hakkimizda() {
         overflow-hidden
       "
     >
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-0 py-10 lg:py-14">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-0 py-8 lg:py-12">
         {/* GRID: mobil tek kolon, lg: iki kolon */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center lg:ml-10 relative">
           
