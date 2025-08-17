@@ -19,15 +19,17 @@ export default function Hakkimizda() {
     <section
   className="
     relative w-full
-    h-[calc(100svh-64px)]    /* mobil: header 64px çıkar */
+    h-[calc(100svh-64px)]   /* mobilde header çıkarılmış tam ekran */
     lg:min-h-screen
-    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe] lg:pt-20
+    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
     overflow-hidden
+    flex flex-col
+    justify-between
   "
 >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-0 p-2 lg:py-12">
         {/* GRID: mobil tek kolon, lg: iki kolon */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-45 lg:gap-16 items-center lg:ml-10 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center lg:ml-10 relative">
           
           {/* ================ SOL: METİN ================ */}
           <div className="text-gray-800 relative z-10">
@@ -80,14 +82,13 @@ export default function Hakkimizda() {
               "
             />
 
-            {/* Mobil hex görsel (sağ altta, sadece mobil) */}
             <img
   src="/images/hakkimizda/hakkimizda-img.png"
   alt="Teknoloji Haritası"
   className="
     block lg:hidden
     pointer-events-none select-none
-    absolute bottom-0 right-0  
+    mx-auto mt-10   /* yazıdan sonra biraz boşluk */
     w-[80vw] max-w-[360px] h-auto object-contain
   "
 />
@@ -97,16 +98,18 @@ export default function Hakkimizda() {
         </div>
 
         {/* Mobil alt bilgi bloğu (sol altta) */}
-        <div className="
-            lg:hidden
-            absolute left-6 bottom-6 right-6
-            text-[10px] leading-snug
-          ">
-          <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret Anonim Şirketi</p>
-          <p>Ticaret Sicil Numarası: 78086</p>
-          <p>Mersis Numarası: 0177081335200001</p>
-          <p>Şehitkamil/Gaziantep</p>
-        </div>
+        <div
+  className="
+    lg:hidden
+    mt-6   /* görselle çakışmaması için yukarıdan boşluk */
+    text-[10px] leading-snug text-left
+  "
+>
+  <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret Anonim Şirketi</p>
+  <p>Ticaret Sicil Numarası: 78086</p>
+  <p>Mersis Numarası: 0177081335200001</p>
+  <p>Şehitkamil/Gaziantep</p>
+</div>
       </div>
 
       {/* Üst dekor – sadece masaüstü */}
