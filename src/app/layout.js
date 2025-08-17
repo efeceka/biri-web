@@ -9,10 +9,10 @@ export const viewport = {
 };
 
 export const metadata = {
-  // Android için status bar rengi (opsiyonel ama iyi olur)
+  // Status bar için TEK renk: gradient'in üst rengi
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#95bafe" },
-    { media: "(prefers-color-scheme: dark)", color: "#95bafe" },
+    { media: "(prefers-color-scheme: light)", color: "#cbfdd8" },
+    { media: "(prefers-color-scheme: dark)",  color: "#cbfdd8" },
   ],
 };
 
@@ -26,9 +26,7 @@ export default function RootLayout({ children }) {
           [background-attachment:fixed]
           pb-[env(safe-area-inset-bottom)]
         "
-        style={{
-          paddingTop: "env(safe-area-inset-top)",  // iPhone çentiği
-        }}
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         <Header />
         {children}
