@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Nunito_Sans } from "next/font/google";
 import { Poppins } from "next/font/google";
+import { Fascinate_Inline } from "next/font/google";
+
+export const fascinate = Fascinate_Inline({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -22,35 +28,35 @@ export default function Hero() {
           <div className="max-w-lg mx-auto lg:ml-20 text-center lg:text-center z-10
                           relative lg:mt-0">
             <h1 className={`${nunito.className} relative text-gray-900 leading-tight`}>
-            {/* BG sadece mobilde, metnin ARKASINDA */}
-            <span className="absolute -inset-10 lg:hidden z-0 pointer-events-none">
-                <Image
-                src="/images/home/mobile-bg3.png"
-                alt=""
-                fill
-                sizes="100vw"
-                className="object-contain "
-                priority
-                />
-            </span>
+  {/* BG sadece mobilde, metnin ARKASINDA */}
+  <span className="absolute -inset-10 lg:hidden z-0 pointer-events-none">
+    <Image
+      src="/images/home/mobile-bg3.png"
+      alt=""
+      fill
+      sizes="100vw"
+      className="object-contain"
+      priority
+    />
+  </span>
 
-            {/* Metinler ÖNDE */}
-            <span className="relative z-10 block text-3xl lg:text-5xl py-2">
-                Teknolojinin kalbinde;
-            </span>
+  {/* Metinler ÖNDE */}
+  <span className="relative z-10 block text-3xl lg:text-5xl py-2">
+    Teknolojinin kalbinde;
+  </span>
 
-            <span className="relative z-10 flex items-center justify-center lg:justify-center gap-1 -mt-5 lg:mt-[-20px]">
-                <span className="text-3xl lg:text-6xl">Artık</span>
-                <Image
-                src="/images/logo/logo-hero.png"
-                alt="biri"
-                width={193}
-                height={185}
-                className="block h-[100px] lg:h-[160px] w-auto -mx-[44px] lg:-mx-[70px]"
-                />
-                <span className="text-3xl lg:text-6xl">var!</span>
-            </span>
-            </h1>
+  <span className="relative z-10 flex items-center justify-center gap-2 mt-4 lg:mt-6">
+    <span className="text-3xl lg:text-6xl">Artık</span>
+
+    <span
+      className={`${fascinate.className} text-5xl lg:text-7xl mb-2`}
+    >
+      biri
+    </span>
+
+    <span className="text-3xl lg:text-6xl">var!</span>
+  </span>
+</h1>
 
             <p
               className={`${poppins.className} text-base lg:text-lg text-[#737373] mt-5 lg:mt-2`}
