@@ -21,14 +21,15 @@ const nunito = Nunito_Sans({
 export default function Hero() {
   return (
     <section
-  className="
-    relative w-full
-    h-screen                 /* tam ekran */
-    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-    pt-[64px] lg:pt-20       /* mobilde header yüksekliği kadar boşluk */
-    overflow-hidden
-  "
->
+      className="
+        relative w-full
+        h-[calc(100svh-64px)]     /* MOBİL: header (64px) çıkar, scroll kalksın */
+        lg:h-screen               /* DESKTOP: eskisi gibi tam ekran */
+        bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
+        pt-0 lg:pt-24             /* MOBİL: padding yok; DESKTOP: mevcut padding */
+        overflow-hidden
+      "
+    >
       {/* İçerik container */}
       <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
         {/* Metin blok */}
@@ -95,19 +96,23 @@ export default function Hero() {
           "
         />
 
-        {/* Mobil görsel – taşmayı engellemek için max-height verildi */}
-        <img
-          src="/images/home/mobil-bg1.png"
-          alt="Mobil görsel"
-          className="
-            block lg:hidden
-            absolute bottom-0 left-0
-            w-[100vw] h-auto
-            max-w-[520px] max-h-[38svh]   /* <<< mobilde aşırı büyüyüp scroll yaratmasın */
-            select-none object-contain pointer-events-none
-          "
-        />
+       
       </div>
+      
+      <img
+    src="/images/home/mobil-bg1.png"
+    alt="Mobil görsel"
+    className="
+      lg:hidden
+      pointer-events-none select-none
+      absolute bottom-0
+      left-[max(0px,env(safe-area-inset-left))]
+      w-[100svw] h-auto
+      max-w-none           /* genişliği asla kısma */
+      object-contain
+      z-0
+    "
+  />
 
       {/* Üst dekor (sadece masaüstü) */}
       <img
