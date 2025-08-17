@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="tr"
-      className={`${inter.variable} ${roboto.variable} ${montserrat.variable} ${nunito.variable} `}
+      className=""
     >
       <body>
         <Header/>
