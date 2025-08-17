@@ -68,7 +68,7 @@ export default function YonetimPage() {
         relative w-full
         h-[calc(100svh-64px)] lg:h-[calc(100vh-80px)]   /* header çıkar */
         bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-        overflow-hidden
+        overflow-hidden lg:py-30
         ${poppins.className}
       `}
     >
@@ -102,7 +102,7 @@ export default function YonetimPage() {
               yonetim-illu
               w-[min(88%,900px)]
               lg:w-[clamp(560px,56vw,980px)]
-              max-h-[28svh] sm:max-h-[34svh] md:max-h-[42vh]
+              max-h-[28svh] sm:max-h-[34svh] md:max-h-[58vh] lg:pb-25 pb-10
               h-auto object-contain opacity-95 select-none pointer-events-none
             "
           />
@@ -113,7 +113,7 @@ export default function YonetimPage() {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            @media (max-height: 780px) {
+            @media (max-height: 500px) {
               .yonetim-illu { display: none !important; }
             }
           `,
