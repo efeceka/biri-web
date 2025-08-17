@@ -71,12 +71,16 @@ export default function IletisimPage() {
       `}
     >
       <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
+         {/* Mobil başlık */}
+        <h2 className="lg:hidden text-center text-xl font-extrabold text-[#545454]">
+        Bize Ulaşın
+        </h2>
         {/* İçeriği dikeyde tam ortaya almak için tam yükseklik grid */}
-        <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
+        <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
           {/* SOL: FORM */}
           <form onSubmit={onSubmit} className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-2">Adınız:</label>
+              <label className="block text-gray-700 font-semibold mb-1">Adınız:</label>
               <input
                 type="text"
                 name="name"
@@ -85,27 +89,27 @@ export default function IletisimPage() {
               />
             </div>
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-2">Telefon numaranız:</label>
+              <label className="block text-gray-700 font-semibold mb-1">Telefon numaranız:</label>
               <input
                 type="tel"
                 name="phone"
-                className="w-full rounded-xl h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+                className="w-full rounded-xl h-9 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
               />
             </div>
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-2">e-posta adresiniz:</label>
+              <label className="block text-gray-700 font-semibold mb-1">e-posta adresiniz:</label>
               <input
                 type="email"
                 name="email"
-                className="w-full rounded-xl h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+                className="w-full rounded-xl h-9 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
                 required
               />
             </div>
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-2">Mesajınız:</label>
+              <label className="block text-gray-700 font-semibold mb-1">Mesajınız:</label>
               <textarea
                 name="message"
-                rows={3}
+                rows={2}
                 className="w-full rounded-2xl px-5 py-4 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300 resize-none"
                 required
               />

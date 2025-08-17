@@ -35,38 +35,23 @@ export default function Header() {
         h-16 lg:h-20
         bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
         lg:bg-transparent
-        /* Mobil: scroll ile gider → relative */
+        /* Mobil:
         /* Desktop: sabit kalır */
         lg:fixed lg:inset-x-0 lg:top-0
       "
     >
       <div className="relative max-w-[1440px] mx-auto h-full px-4 lg:px-6 flex items-center">
         {/* Mobil: burger (sol) */}
-        <button
-          aria-label="Menüyü aç/kapat"
-          onClick={() => setOpen((s) => !s)}
-          className="lg:hidden absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-black/10 hover:bg-black/15 transition"
-        >
-          <span
-            className={`block h-[2px] w-5 bg-black transition-all ${
-              open
-                ? "translate-y-[6px] rotate-45"
-                : "-translate-y-[6px]"
-            }`}
-          />
-          <span
-            className={`block h-[2px] w-5 bg-black transition-opacity ${
-              open ? "opacity-0" : "opacity-100"
-            }`}
-          />
-          <span
-            className={`block h-[2px] w-5 bg-black transition-all ${
-              open
-                ? "-translate-y-[6px] -rotate-45"
-                : "translate-y-[6px]"
-            }`}
-          />
-        </button>
+        {/* Mobil: burger (sol) */}
+<button
+  aria-label="Menüyü aç/kapat"
+  onClick={() => setOpen((s) => !s)}
+  className="lg:hidden absolute left-4 top-1/2 -translate-y-1/2 inline-flex flex-col justify-center h-9 w-9"
+>
+  <span className="block rounded-2xl h-[4px] w-8 bg-white mb-[4px]" />
+  <span className="block rounded-2xl h-[4px] w-8 bg-white mb-[4px]" />
+  <span className="block rounded-2xl h-[4px] w-8 bg-white" />
+</button>
 
         {/* Mobil: logo (sağ) */}
         <Link

@@ -56,7 +56,7 @@ geleceğin teknolojilerine ışık tutan çözümler tasarlıyoruz.
       </div>
 
       {/* SAĞ: GÖRSEL */}
-      <div className="relative flex lg:justify-end justify-center mt-8 lg:mt-40">
+      <div className="relative flex lg:justify-end justify-center lg:mt-40">
         {/* Masaüstü */}
         <img
           src="/images/hakkimizda/hakkimizda-img.png"
@@ -68,7 +68,7 @@ geleceğin teknolojilerine ışık tutan çözümler tasarlıyoruz.
         <img
           src="/images/hakkimizda/hakkimizda-img.png"
           alt="Teknoloji Haritası"
-          className="block lg:hidden w-[75vw] max-w-[340px] h-auto object-contain"
+          className="block lg:hidden w-[70vw] max-w-[340px] h-auto object-contain ml-auto"
         />
       </div>
     </div>

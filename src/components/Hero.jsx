@@ -55,7 +55,7 @@ export default function Hero() {
               </span>
 
               {/* Metinler ÖNDE */}
-              <span className="relative z-10 block text-3xl lg:text-5xl py-2">
+              <span className="relative z-10 block text-3xl lg:text-5xl">
                 Teknolojinin kalbinde;
               </span>
 
@@ -100,7 +100,7 @@ export default function Hero() {
       </div>
       
       <img
-    src="/images/home/mobil-bg1.png"
+    src="/images/home/mobile-el.png"
     alt="Mobil görsel"
     className="
       lg:hidden
@@ -111,6 +111,7 @@ export default function Hero() {
       max-w-none           /* genişliği asla kısma */
       object-contain
       z-0
+      
     "
   />
 
