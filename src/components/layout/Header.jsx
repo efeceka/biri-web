@@ -29,7 +29,14 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[100] bg-transparent h-16 lg:h-20">
+    <header
+      className="
+        sticky top-0 z-[100] h-16      
+        lg:fixed lg:inset-x-0 lg:top-0 lg:h-20
+        bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
+        lg:bg-transparent
+      "
+    >
       <div className="relative max-w-[1440px] mx-auto h-full px-4 lg:px-6 flex items-center">
         {/* Mobil: burger (sol) */}
         <button

@@ -20,14 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <body
-        className="
-          min-h-screen
-          bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-          [background-attachment:fixed]
-          pb-[env(safe-area-inset-bottom)]
-        "
-        style={{ paddingTop: "env(safe-area-inset-top)" }}
-      >
+  className="min-h-screen bg-gradient-to-r from-[#cbfdd8] to-[#95bafe] [background-attachment:fixed] pb-[env(safe-area-inset-bottom)]"
+  style={{ paddingTop: "env(safe-area-inset-top)" }}
+>
         <Header />
         {children}
       </body>

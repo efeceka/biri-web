@@ -17,15 +17,14 @@ export const fascinate = Fascinate_Inline({
 export default function Hakkimizda() {
   return (
     <section
-      className="
-        relative w-full
-        h-auto
-        min-h-screen lg:min-h-screen
-        bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-        pt-16 lg:pt-20
-        overflow-hidden
-      "
-    >
+  className="
+    relative w-full
+    min-h-screen
+    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
+    pt-12 lg:pt-20
+    overflow-hidden
+  "
+>
       <div className="max-w-[1600px] mx-auto px-6 lg:px-0 py-8 lg:py-12">
         {/* GRID: mobil tek kolon, lg: iki kolon */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center lg:ml-10 relative">
@@ -83,15 +82,15 @@ export default function Hakkimizda() {
 
             {/* Mobil hex görsel (sağ altta, sadece mobil) */}
             <img
-            src="/images/hakkimizda/hakkimizda-img.png"
-            alt="Teknoloji Haritası"
-            className="
-                block lg:hidden
-                pointer-events-none select-none
-                fixed bottom-6 right-0
-                w-[85vw] max-w-[520px] h-auto object-contain mb-15
-            "
-            />
+  src="/images/hakkimizda/hakkimizda-img.png"
+  alt="Teknoloji Haritası"
+  className="
+    block lg:hidden
+    pointer-events-none select-none
+    absolute bottom-0 right-0  
+    w-[80vw] max-w-[360px] h-auto object-contain
+  "
+/>
           </div>
 
           
