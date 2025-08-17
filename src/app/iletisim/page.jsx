@@ -2,46 +2,23 @@
 import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 
-const WHATSAPP_NUMBER = "905555555555"; // 90 + GSM. Kendi numaranızla değiştirin.
+const WHATSAPP_NUMBER = "905555555555";
 
 export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-export default function IletisimPage() {
-  function onSubmit(e) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const name = form.name.value.trim();
-    const phone = form.phone.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    const text =
-      `Merhaba, bir iletişim formu gönderildi:\n` +
-      `• Ad: ${name || "-"}\n` +
-      `• Telefon: ${phone || "-"}\n` +
-      `• E-posta: ${email || "-"}\n` +
-      `• Mesaj: ${message || "-"}`;
-
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank"); // yeni sekmede WhatsApp
-  }
-
-  function IletisimIllu({ className = "" }) {
+function IletisimIllu({ className = "" }) {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    // Yalnızca EKRAN GENİŞLİĞİ ≤ 768px ve YÜKSEKLİK ≤ 800px olduğunda gizle
+    // Sadece MOBİL ve ekran yüksekliği ≤ 800px ise gizle
     const mq = window.matchMedia("(max-width: 768px) and (max-height: 800px)");
     const update = () => setShow(!mq.matches);
     update();
-
-    // Event listener
     if (mq.addEventListener) mq.addEventListener("change", update);
     else mq.addListener(update);
-
     return () => {
       if (mq.removeEventListener) mq.removeEventListener("change", update);
       else mq.removeListener(update);
@@ -55,33 +32,49 @@ export default function IletisimPage() {
       id="iletisim-illu"
       src="/images/iletisim/iletisim-img.png"
       alt="İletişim simgeleri"
-      className={`w-[min(85%,500px)] lg:w-[clamp(360px,38vw,620px)] h-auto object-contain opacity-95 select-none ${className}`}
+      className={`h-auto object-contain opacity-95 select-none ${className}`}
     />
   );
 }
 
+export default function IletisimPage() {
+  function onSubmit(e) {
+    e.preventDefault();
+    const f = e.currentTarget;
+    const name = f.name.value.trim();
+    const phone = f.phone.value.trim();
+    const email = f.email.value.trim();
+    const message = f.message.value.trim();
+
+    const text =
+      `Merhaba, bir iletişim formu gönderildi:\n` +
+      `• Ad: ${name || "-"}\n` +
+      `• Telefon: ${phone || "-"}\n` +
+      `• E-posta: ${email || "-"}\n` +
+      `• Mesaj: ${message || "-"}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+  }
+
   return (
     <section
-  className={`
-    relative w-full
-    min-h-screen
-    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-    lg:pt-30
-    lg:pb-10
-    overflow-hidden
-    flex items-center pt-12
-    ${poppins.className}
-  `}
->
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          
+      className={`
+        relative w-full
+        h-[calc(100svh-64px)]     /* MOBİL: header (64px) çıkar */
+        lg:min-h-screen           /* DESKTOP: eski davranış */
+        bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
+        pt-0 lg:pt-30             /* mobilde padding yok */
+        lg:pb-10
+        overflow-hidden
+        ${poppins.className}
+      `}
+    >
+      <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
+        {/* İçeriği dikeyde tam ortaya almak için tam yükseklik grid */}
+        <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* SOL: FORM */}
-          <form 
-            onSubmit={onSubmit} 
-            className="space-y-6 w-full max-w-[400px] mx-auto text-center lg:text-left"
-          >
-            {/* Ad */}
+          <form onSubmit={onSubmit} className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-2">Adınız:</label>
               <input
@@ -91,8 +84,6 @@ export default function IletisimPage() {
                 required
               />
             </div>
-
-            {/* Telefon */}
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-2">Telefon numaranız:</label>
               <input
@@ -101,8 +92,6 @@ export default function IletisimPage() {
                 className="w-full rounded-xl h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
               />
             </div>
-
-            {/* Email */}
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-2">e-posta adresiniz:</label>
               <input
@@ -112,8 +101,6 @@ export default function IletisimPage() {
                 required
               />
             </div>
-
-            {/* Mesaj */}
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-2">Mesajınız:</label>
               <textarea
@@ -123,8 +110,6 @@ export default function IletisimPage() {
                 required
               />
             </div>
-
-            {/* Gönder (WhatsApp) */}
             <div className="flex justify-center lg:justify-start">
               <button
                 type="submit"
@@ -135,15 +120,14 @@ export default function IletisimPage() {
                   transition
                 "
               >
-                GÖNDER
-                <span className="inline-block translate-y-[1px]">›</span>
+                GÖNDER <span className="inline-block translate-y-[1px]">›</span>
               </button>
             </div>
           </form>
 
-          {/* SAĞ: BİLGİ + İKON */}
-          <div className="flex flex-col gap-8 text-center lg:text-left items-center lg:items-start">
-            <p className="text-gray-700 text-lg">
+          {/* SAĞ: METİN + İLLÜSTRASYON */}
+          <div className="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
+            <p className="text-gray-700 text-base lg:text-lg">
               Veya{" "}
               <a href="mailto:info@biri.com" className="text-blue-700 underline underline-offset-4">
                 info@biri.com
@@ -151,9 +135,10 @@ export default function IletisimPage() {
               e-posta adresinden ulaşabilirsiniz.
             </p>
 
-            <div className="relative flex justify-center lg:justify-start -mt-4 sm:-mt-6 lg:mt-0 w-full">
-  <IletisimIllu className="block mx-auto lg:mx-0" />
-</div>
+            {/* İllüstrasyon: mobilde taşma ve scroll yaratmaması için ölçü kısıtları */}
+            <div className="relative w-full flex justify-center lg:justify-start">
+              <IletisimIllu className="w-[min(85%,480px)] lg:w-[clamp(360px,38vw,620px)] max-h-[38svh] lg:max-h-none" />
+            </div>
           </div>
         </div>
       </div>

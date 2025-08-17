@@ -19,15 +19,15 @@ export default function Hakkimizda() {
     <section
   className="
     relative w-full
-    min-h-screen
-    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-    pt-12 lg:pt-20
+    h-[calc(100svh-64px)]    /* mobil: header 64px çıkar */
+    lg:min-h-screen
+    bg-gradient-to-r from-[#cbfdd8] to-[#95bafe] lg:pt-20
     overflow-hidden
   "
 >
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-0 py-8 lg:py-12">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-0 p-2 lg:py-12">
         {/* GRID: mobil tek kolon, lg: iki kolon */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center lg:ml-10 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-45 lg:gap-16 items-center lg:ml-10 relative">
           
           {/* ================ SOL: METİN ================ */}
           <div className="text-gray-800 relative z-10">
