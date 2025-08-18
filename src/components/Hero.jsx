@@ -37,7 +37,7 @@ export default function Hero() {
             className="
               max-w-lg mx-auto lg:ml-20 text-center lg:text-center z-10
               relative 
-              translate-y-15 md:translate-y-20  lg:translate-y-15
+              translate-y-15 md:translate-y-15  lg:-translate-y-15
             "
           >
             <h1 className={`${nunito.className} relative text-gray-900 leading-tight`}>
