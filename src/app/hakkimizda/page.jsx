@@ -25,13 +25,13 @@ export default function Hakkimizda() {
 >
   {/* ORTA BLOK (metin + görsel) */}
   <div className="flex-1 flex items-start">
-    <div className="max-w-[1600px] mx-auto px-6 lg:px-0 lg:py-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center lg:ml-18 w-full">
+    <div className="max-w-[1440px] mx-auto lg:px-0 lg:py-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center lg:ml-18 w-full">
       
       {/* SOL: METİN */}
-      <div className="text-gray-800 relative z-10 lg:ml-5">
-        <h1 className="block lg:hidden text-center text-2xl font-extrabold text-white mb-4">
+      <div className="text-gray-800 relative z-10 lg:ml-5 px-6">
+        <h2 className="lg:hidden text-center text-xl font-extrabold text-white mb-2">
           Hakkımızda
-        </h1>
+        </h2>
 
         <div className={`${poppins.className} space-y-4 md:translate-y-15 text-[12px] md:text-[20px] lg:text-[18px] leading-snug md:leading-relaxed text-justify`}>
           <p>
@@ -66,10 +66,15 @@ export default function Hakkimizda() {
 
         {/* Mobil */}
         <img
-          src="/images/hakkimizda/hakkimizda-img.png"
-          alt="Teknoloji Haritası"
-          className="block lg:hidden w-[70vw] max-w-[340px] h-auto object-contain ml-auto"
-        />
+  src="/images/hakkimizda/hakkimizda-img.png"
+  alt="Teknoloji Haritası"
+  className="
+    block lg:hidden
+    w-[80vw] max-w-[400px]   /* genişliği %80, max genişlik 400px */
+    h-auto object-contain
+    ml-auto -mr-1
+  "
+/>
       </div>
     </div>
   </div>
@@ -77,8 +82,8 @@ export default function Hakkimizda() {
   <div
     className="
       px-6 py-3 
-      text-[10px] leading-tight text-left 
-      lg:text-[12px] lg:leading-snug lg:px-12 lg:pb-6 lg:ml-11
+      text-[7px] leading-tight text-left 
+      lg:text-[12px] lg:leading-snug lg:px-18 lg:pb-6 lg:ml-11
     "
     >
     <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>

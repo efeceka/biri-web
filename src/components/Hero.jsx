@@ -31,8 +31,8 @@ export default function Hero() {
       "
     >
       {/* İçerik container */}
-      <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
-        <div className="h-full flex items-start lg:items-center">
+      <div className="relative  mx-auto h-full px-6 lg:px-20">
+        <div className="h-full flex items-start lg:items-center max-w-[1440px] mx-auto">
           <div
             className="
               max-w-lg mx-auto lg:ml-20 text-center lg:text-center z-10
@@ -56,7 +56,7 @@ export default function Hero() {
                 Teknolojinin kalbinde;
               </span>
 
-              <span className="relative z-10 flex items-center justify-center gap-2 mt-4 lg:mt-6">
+              <span className="relative z-10 flex items-center justify-center gap-5 mt-4 lg:mt-6">
                 <span className="text-3xl lg:text-6xl">Artık</span>
 
                 <span className={`${fascinate.className} text-5xl lg:text-7xl mb-1`}>
@@ -67,7 +67,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className={`${poppins.className} text-base lg:text-lg text-[#737373] mt-5 lg:mt-10`}>
+            <p className={`${poppins.className} text-base lg:text-lg text-[#737373] p-3 lg:p-0 mt-5 lg:mt-10`}>
               Geleceğin teknolojileri, hayatınızı bugün kolaylaştırsın!
             </p>
 
@@ -81,22 +81,24 @@ export default function Hero() {
         </div>
 
         {/* Telefon (sadece masaüstü) */}
-        <img
-          src="/images/home/home-bg2.png"
-          alt="Telefon"
-          className="
-            hidden lg:block
-            absolute bottom-0 right-0
-            w-[clamp(260px,65%,1100px)]
-            h-auto max-h-[815px]
-            drop-shadow-2xl select-none object-contain
-          "
-        />
+       <img
+  src="/images/home/home-bg2.png"
+  alt="Telefon"
+  className="
+    hidden lg:block
+    absolute bottom-0 right-0
+    w-[clamp(260px,65%,1100px)]
+    xl:w-[clamp(320px,70%,1400px)]   /* çok geniş ekranlarda daha büyük */
+    h-auto
+    max-h-[815px] xl:max-h-[950px]   /* daha yüksek sınır */
+    drop-shadow-2xl select-none object-contain
+  "
+/>
 
        
          </div>
       
-           <img
+          <img
   src="/images/home/mobile-el.png"
   alt="Mobil görsel"
   className="
@@ -104,9 +106,8 @@ export default function Hero() {
     pointer-events-none select-none
     absolute bottom-0
     left-[max(0px,env(safe-area-inset-left))]
-    w-[100svw] h-auto
-    max-w-none
-    max-h-[70vh]       /* <<< maksimum yüksekliği ekranın %60’ı */
+    w-[70svw] h-auto       /* genişliği %70 yap */
+    max-w-[300px]          /* maksimum genişliği sınırla */
     object-contain
     z-0
   "
@@ -120,7 +121,7 @@ export default function Hero() {
             hidden lg:block
             absolute top-0 right-0
             w-[clamp(160px,33%,600px)]
-            h-auto max-h-[480px]
+            h-auto max-h-[480px] z-1000
             select-none object-contain pointer-events-none
             "
         />

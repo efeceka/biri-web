@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 
-const WHATSAPP_NUMBER = "905555555555";
+const WHATSAPP_NUMBER = "905555555555"; // İstersen kullanırsın
 
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -13,7 +13,6 @@ function IletisimIllu({ className = "" }) {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    // Sadece MOBİL ve ekran yüksekliği ≤ 800px ise gizle
     const mq = window.matchMedia("(max-width: 768px) and (max-height: 800px)");
     const update = () => setShow(!mq.matches);
     update();
@@ -42,23 +41,24 @@ export default function IletisimPage() {
     <section
       className={`
         relative w-full
-        h-[calc(100svh-64px)]     /* MOBİL: header (64px) çıkar */
-        lg:min-h-screen           /* DESKTOP: eski davranış */
+        h-[calc(100svh-64px)]
+        lg:min-h-screen
         bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-        pt-0 lg:pt-30             /* mobilde padding yok */
-        lg:pb-10
+        pt-0 lg:pt-30
         overflow-hidden
         ${poppins.className}
       `}
     >
-      <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
-         {/* Mobil başlık */}
-        <h2 className="lg:hidden text-center text-xl font-extrabold text-white">
-        Bize Ulaşın
-        </h2>
-        {/* İçeriği dikeyde tam ortaya almak için tam yükseklik grid */}
-        <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
-          {/* SOL: FORM */}
+      {/* DIŞ SARMA: 1) içerik  2) alt künye */}
+      <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20 grid grid-rows-[1fr_auto]">
+        {/* ====== 1) İÇERİK ====== */}
+        <div className="grid h-full grid-cols-1 lg:grid-cols-2 items-center">
+          {/* Mobil başlık */}
+          <h2 className="lg:hidden text-center text-xl font-extrabold text-white mb-1">
+            Bize Ulaşın
+          </h2>
+
+          {/* Sol: Form */}
           <form className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Adınız:</label>
@@ -69,6 +69,7 @@ export default function IletisimPage() {
                 required
               />
             </div>
+
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Telefon numaranız:</label>
               <input
@@ -77,6 +78,7 @@ export default function IletisimPage() {
                 className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
               />
             </div>
+
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-1 md:mb-2">e-posta adresiniz:</label>
               <input
@@ -86,6 +88,7 @@ export default function IletisimPage() {
                 required
               />
             </div>
+
             <div className="text-left">
               <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Mesajınız:</label>
               <textarea
@@ -95,6 +98,7 @@ export default function IletisimPage() {
                 required
               />
             </div>
+
             <div className="flex justify-center lg:justify-start">
               <button
                 type="submit"
@@ -110,7 +114,7 @@ export default function IletisimPage() {
             </div>
           </form>
 
-          {/* SAĞ: METİN + İLLÜSTRASYON */}
+          {/* Sağ: Metin + İllüstrasyon */}
           <div className="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
             <p className="text-gray-700 text-base lg:text-lg">
               Veya{" "}
@@ -120,15 +124,15 @@ export default function IletisimPage() {
               e-posta adresinden ulaşabilirsiniz.
             </p>
 
-            {/* İllüstrasyon: mobilde taşma ve scroll yaratmaması için ölçü kısıtları */}
+            {/* İllüstrasyon — mobilde kısık yükseklik */}
             <div className="relative w-full flex justify-center lg:justify-start">
-              <IletisimIllu className="w-[min(85%,480px)] lg:w-[clamp(360px,38vw,620px)] max-h-[38svh] lg:max-h-none" />
+              <IletisimIllu className="w-[min(80%,440px)] lg:w-[clamp(360px,38vw,620px)] max-h-[30svh] lg:max-h-none" />
             </div>
           </div>
         </div>
-      </div>
+    </div>
 
-      {/* Üst dekor sadece masaüstü */}
+      {/* Üst dekor (masaüstü) */}
       <img
         src="/images/home/home-bg3.png"
         alt=""

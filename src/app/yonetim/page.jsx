@@ -105,12 +105,6 @@ export default function YonetimPage() {
                     h-auto object-contain opacity-95 select-none pointer-events-none
                 "
                 />
-            <div className="px-4 text-[10px] lg:text-[12px] text-center lg:py-2 hidden md:block">
-                <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
-                <p>Ticaret Sicil Numarası: 78086</p>
-                <p>Mersis Numarası: 0177081335200001</p>
-                <p>Şehitkamil/Gaziantep</p>
-            </div>
             </div>
       </div>
 
