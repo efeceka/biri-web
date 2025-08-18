@@ -53,7 +53,7 @@ export default function IletisimPage() {
     >
       <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
          {/* Mobil başlık */}
-        <h2 className="lg:hidden text-center text-xl font-extrabold text-[#545454]">
+        <h2 className="lg:hidden text-center text-xl font-extrabold text-white">
         Bize Ulaşın
         </h2>
         {/* İçeriği dikeyde tam ortaya almak için tam yükseklik grid */}

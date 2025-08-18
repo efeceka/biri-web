@@ -29,7 +29,7 @@ export default function Hakkimizda() {
       
       {/* SOL: METİN */}
       <div className="text-gray-800 relative z-10 lg:ml-5">
-        <h1 className="block lg:hidden text-center text-2xl font-extrabold text-[#545454] mb-4">
+        <h1 className="block lg:hidden text-center text-2xl font-extrabold text-white mb-4">
           Hakkımızda
         </h1>
 
@@ -80,19 +80,19 @@ export default function Hakkimizda() {
       text-[10px] leading-tight text-left 
       lg:text-[12px] lg:leading-snug lg:px-12 lg:pb-6 lg:ml-11
     "
-  >
+    >
     <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
     <p>Ticaret Sicil Numarası: 78086</p>
     <p>Mersis Numarası: 0177081335200001</p>
     <p>Şehitkamil/Gaziantep</p>
   </div>
 
-  {/* DEKOR (masaüstü) */}
-  <img
-    src="/images/home/home-bg3.png"
-    alt=""
-    className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto max-h-[480px] object-contain pointer-events-none"
-  />
+    {/* DEKOR (masaüstü) */}
+    <img
+        src="/images/home/home-bg3.png"
+        alt=""
+        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto max-h-[480px] object-contain pointer-events-none"
+    />
 </section>
   );
 }
