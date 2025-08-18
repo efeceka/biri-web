@@ -8,8 +8,8 @@ export const poppins = Poppins({
 export const metadata = { title: "Yönetim | Biri Teknoloji" };
 
 const PEOPLE = [
-  { name: "ALİ OZAN KAZBAŞ", title: "Kurucu Ortak & Proje Direktörü", email: "ozankazbas@biri.com", linkedin: "https://www.linkedin.com/in/aliozankazbaş" },
-  { name: "MEHMET ALİ BİLEN", title: "Kurucu Ortak & Proje Operasyonlar Direktörü", email: "alibilen@biri.com", linkedin: "https://www.linkedin.com/in/mehmetalibilen" },
+  { name: "ALİ OZAN KAZBAŞ", title: "Kurucu Ortak & Proje Direktörü", email: "ozankazbas@biriteknoloji.com", linkedin: "https://www.linkedin.com/in/aliozankazbaş" },
+  { name: "MEHMET ALİ BİLEN", title: "Kurucu Ortak & Proje Operasyonlar Direktörü", email: "alibilen@biriteknoloji.com", linkedin: "https://www.linkedin.com/in/mehmetalibilen" },
 ];
 
 function MailIcon() {

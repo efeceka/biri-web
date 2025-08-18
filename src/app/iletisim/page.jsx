@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 import { Poppins } from "next/font/google";
 
-const WHATSAPP_NUMBER = "905555555555"; // İstersen kullanırsın
-
 export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -36,6 +34,38 @@ function IletisimIllu({ className = "" }) {
   );
 }
 
+async function handleSubmit(e) {
+    e.preventDefault();
+    const f = e.currentTarget;
+
+    const payload = {
+      name: f.name.value.trim(),
+      phone: f.phone.value.trim(),
+      email: f.email.value.trim(),
+      message: f.message.value.trim(),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      if (data.ok) {
+        alert("Teşekkürler! Mesajınız ulaştı.");
+        f.reset();
+      } else {
+        alert("Gönderilemedi: " + (data.error || "Sunucu hatası"));
+      }
+    } catch (err) {
+      console.error("Hata:", err);
+      alert("Bir hata oluştu, lütfen tekrar deneyin.");
+    }
+  }
+
+
 export default function IletisimPage() {
   return (
     <section
@@ -59,7 +89,9 @@ export default function IletisimPage() {
 
           {/* Sol: Form */}
           {/* Sol: Form */}
-        <form className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
+        <form className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left"
+                onSubmit={handleSubmit}  
+                >
         <div className="text-left">
             <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Adınız:</label>
             <input
@@ -127,8 +159,8 @@ export default function IletisimPage() {
           <div className="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
             <p className="text-gray-700 text-base lg:text-lg">
               Veya{" "}
-              <a href="mailto:info@biri.com" className="text-blue-700 underline underline-offset-4">
-                info@biri.com
+              <a href="mailto:info@biriteknoloji.com" className="text-blue-700 underline underline-offset-4">
+                info@biriteknoloji.com
               </a>{" "}
               e-posta adresinden ulaşabilirsiniz.
             </p>
