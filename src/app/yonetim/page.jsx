@@ -39,7 +39,7 @@ function Card({ person }) {
         rounded-[28px] bg-[#f2fcf0] text-[#545454] shadow-lg backdrop-blur-sm
         flex flex-col items-center text-center
         w-[min(78vw,350px)] md:w-[clamp(280px,28vw,380px)]
-        min-h-[220px] md:min-h-[260px]
+        min-h-[180px] md:min-h-[260px]
         px-5 md:px-3 py-5 md:py-8
         ${poppins.className}
       `}
@@ -47,9 +47,9 @@ function Card({ person }) {
       <h3 className="font-extrabold tracking-wide text-[#545454] text-[20px] md:text-[22px] lg:text-[24px]">
         {person.name}
       </h3>
-      <p className="text-gray-600 mt-2 text-[14px] md:text-[15px]">{person.title}</p>
+      <p className="text-gray-600 lg:mt-4 text-[14px] md:text-[15px]">{person.title}</p>
 
-      <div className="mt-7 space-y-4 w-full">
+      <div className="mt-4 lg:mt-7 space-y-4 w-full">
         <a href={`mailto:${person.email}`} className="flex items-center justify-center gap-3 text-gray-700 hover:text-gray-900 transition">
           <MailIcon /><span className="truncate text-[15px]">{person.email}</span>
         </a>
@@ -93,16 +93,19 @@ export default function YonetimPage() {
             </div>
 
             {/* Alt görsel – mobilde daha küçük, çok kısa ekranlarda gizle */}
-<div className="self-end flex flex-col items-center pb-[env(safe-area-inset-bottom)] lg:mt-10">
+<div className="self-end flex flex-col items-center justify-center pb-[env(safe-area-inset-bottom)] lg:mt-5">
   <img
     src="/images/yonetim/yonetim.png"
     alt="İllüstrasyon"
     className="
       yonetim-illu block
-      w-[80vw] max-w-[360px]    /* mobilde orantılı küçültme */
-      sm:w-[min(70%,700px)] 
-      lg:w-[clamp(420px,46vw,760px)]
-      max-h-[22svh] sm:max-h-[28svh] md:max-h-[40vh]
+      w-[80vw] max-w-[360px]               /* mobil */
+      sm:w-[min(70%,700px)]
+      lg:max-w-none
+      lg:w-[clamp(460px,46vw,860px)]       /* masaüstü biraz küçültülmüş */
+      lg:max-h-[52vh]
+      xl:w-[clamp(520px,44vw,940px)]       /* xl ekranlarda da biraz daha küçük */
+      xl:max-h-[55vh]
       h-auto object-contain opacity-95 select-none pointer-events-none
     "
   />
