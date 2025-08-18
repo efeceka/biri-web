@@ -83,7 +83,7 @@ export default function IletisimPage() {
         {/* ====== 1) İÇERİK ====== */}
         <div className="grid h-full grid-cols-1 lg:grid-cols-2 items-center">
           {/* Mobil başlık */}
-          <h2 className="lg:hidden text-center text-xl font-extrabold text-white mb-1">
+          <h2 className="lg:hidden text-center text-xl font-extrabold text-white">
             Bize Ulaşın
           </h2>
 

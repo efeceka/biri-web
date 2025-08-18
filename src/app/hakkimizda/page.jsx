@@ -93,10 +93,11 @@ export default function Hakkimizda() {
     {/* İkonlar */}
     <div className="flex ml-14 items-end lg:items-center gap-2 pt-[2px]">
       <a
-        href="https://instagram.com/..."
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Instagram"
+        href="https://instagram.com/instagram"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 pointer-events-auto"
+
       >
         <img
           src="/images/icons/instagram.png"
@@ -105,7 +106,7 @@ export default function Hakkimizda() {
         />
       </a>
       <a
-        href="https://linkedin.com/company/..."
+        href="https://www.linkedin.com/company/biri-i%CC%87leri-teknoloji-a-%C5%9F/"
         target="_blank"
         rel="noreferrer"
         aria-label="LinkedIn"
