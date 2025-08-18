@@ -91,13 +91,12 @@ export default function Hakkimizda() {
     </div>
 
     {/* İkonlar */}
-    <div className="flex ml-14 items-end lg:items-center gap-2 pt-[2px]">
+    <div className="flex ml-4 items-end lg:items-center gap-2 pt-[2px]">
       <a
-        href="https://instagram.com/instagram"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 pointer-events-auto"
-
+        href="https://www.instagram.com/biriteknoloji/?utm_source=ig_web_button_share_sheet"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
       >
         <img
           src="/images/icons/instagram.png"
