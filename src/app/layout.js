@@ -13,9 +13,37 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Biri Teknoloji",
-  description: "Geleceğin teknolojileri, hayatınızı bugün kolaylaştırsın!",
-  // BURADAN themeColor'ı kaldırdık
+  title: {
+    default: "Biri Teknoloji",
+    template: "%s | Biri Teknoloji", // sayfalar için şablon
+  },
+  description: "Biri Teknoloji – Dijital dönüşüm ve yenilikçi çözümler.",
+  keywords: ["teknoloji", "yazılım", "dijital dönüşüm", "mobil uygulama, biri teknoloji"],
+  openGraph: {
+    title: "Biri Teknoloji",
+    description: "Yenilikçi teknoloji çözümleriyle iş süreçlerinizi dijitalleştirin.",
+    url: "https://biriteknoloji.com",
+    siteName: "Biri Teknoloji",
+    images: [
+      {
+        url: "/images/logo/hero-biri.png", // senin logon veya uygun görsel
+        width: 1200,
+        height: 630,
+        alt: "Biri Teknoloji",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Biri Teknoloji",
+    description: "Dijital dönüşüm için yenilikçi çözümler",
+    images: ["/images/logo/hero-biri.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
