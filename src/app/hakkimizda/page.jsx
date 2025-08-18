@@ -33,7 +33,7 @@ export default function Hakkimizda() {
           Hakkımızda
         </h1>
 
-        <div className={`${poppins.className} space-y-4 md:translate-y-15 text-[12px] md:text-[15px] lg:text-[18px] leading-snug md:leading-relaxed text-justify`}>
+        <div className={`${poppins.className} space-y-4 md:translate-y-15 text-[12px] md:text-[20px] lg:text-[18px] leading-snug md:leading-relaxed text-justify`}>
           <p>
             Biri İleri Teknoloji A.Ş., dijital dönüşümün hızla ilerlediği günümüzde, sektör odaklı çözümler geliştirmek üzere yola çıkan yenilikçi bir teknoloji girişimidir. Ar-Ge çalışmalarına 2024 yılı başında başlayan{" "}
             <span className={`${fascinate.className} text-[1.2em] text-[#545454]`}>biri</span>, 2025 yılının Temmuz ayında şirketleşme sürecini tamamlamıştır.
@@ -74,8 +74,13 @@ geleceğin teknolojilerine ışık tutan çözümler tasarlıyoruz.
     </div>
   </div>
 
-  {/* ALT BLOK (mobilde küçük yazı) */}
-  <div className="lg:hidden px-6 py-3 text-[10px] leading-tight text-left">
+  <div
+    className="
+      px-6 py-3 
+      text-[10px] leading-tight text-left 
+      lg:text-[12px] lg:leading-snug lg:px-12 lg:pb-6 lg:ml-11
+    "
+  >
     <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
     <p>Ticaret Sicil Numarası: 78086</p>
     <p>Mersis Numarası: 0177081335200001</p>

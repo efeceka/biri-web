@@ -56,7 +56,7 @@ export default function Header() {
         {/* Mobil: logo (sağ) */}
         <Link
           href="/"
-          className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 inline-flex items-center"
+          className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 inline-flex items-center"
         >
           <Image
             src="/images/logo/logo-header.png"

@@ -8,7 +8,7 @@ export const poppins = Poppins({
 export const metadata = { title: "Yönetim | Biri Teknoloji" };
 
 const PEOPLE = [
-  { name: "ALİ OZAN KAZBAŞ", title: "Kurucu Ortak & Proje Direktörü", email: "ozankazbas@biri.com", linkedin: "https://www.linkedin.com/in/aliozankazbas" },
+  { name: "ALİ OZAN KAZBAŞ", title: "Kurucu Ortak & Proje Direktörü", email: "ozankazbas@biri.com", linkedin: "https://www.linkedin.com/in/aliozankazbaş" },
   { name: "MEHMET ALİ BİLEN", title: "Kurucu Ortak & Proje Operasyonlar Direktörü", email: "alibilen@biri.com", linkedin: "https://www.linkedin.com/in/mehmetalibilen" },
 ];
 
@@ -68,23 +68,22 @@ export default function YonetimPage() {
         relative w-full
         h-[calc(100svh-64px)] lg:h-[calc(100vh-80px)]   /* header çıkar */
         bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-        overflow-hidden lg:py-30
         ${poppins.className}
       `}
     >
       <div
-        className="
-          max-w-[1440px] mx-auto px-6 lg:px-20 h-full
-          grid grid-rows-[auto_1fr_auto] gap-y-2    /* 3 satır: boşluk / içerik / alt görsel */
-        "
-      >
+  className="
+    max-w-[1600px] mx-auto px-6 lg:px-20 h-full lg:pt-30
+    grid grid-rows-[auto_1fr_auto]
+  "
+>
         {/* Üst mini boşluk (header'dan sonra nefes payı) */}
-        <div className="h-2 md:h-6" />
+        <div className="h-2 md:h-1" />
 
         {/* Kartlar */}
-        <div className="place-self-center">
+        <div className="justify-self-center place-self-start lg:place-self-center">
           {/* Mobil başlık */}
-          <h1 className="lg:hidden text-2xl font-extrabold text-[#545454] text-center mb-4">Yönetim</h1>
+          <h1 className="lg:hidden text-2xl font-extrabold text-white text-center mb-4">Yönetim</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-[max-content_max-content] justify-center gap-4 md:gap-20">
             {PEOPLE.map((p) => (
@@ -94,19 +93,25 @@ export default function YonetimPage() {
         </div>
 
         {/* Alt görsel – mobilde daha küçük, çok kısa ekranlarda gizle */}
-        <div className="self-end flex justify-center mb-0">
-          <img
-            src="/images/yonetim/yonetim.png"
-            alt="İllüstrasyon"
-            className="
-              yonetim-illu
-              w-[min(88%,900px)]
-              lg:w-[clamp(560px,56vw,980px)]
-              max-h-[28svh] sm:max-h-[34svh] md:max-h-[58vh] lg:pb-25 pb-10
-              h-auto object-contain opacity-95 select-none pointer-events-none
-            "
-          />
-        </div>
+         <div className="self-end flex flex-col items-center pb-[env(safe-area-inset-bottom)] lg:mt-10">
+     <img
+  src="/images/yonetim/yonetim.png"
+  alt="İllüstrasyon"
+  className="
+    yonetim-illu hidden md:block
+    w-[min(70%,700px)] 
+    lg:w-[clamp(420px,46vw,760px)]
+    max-h-[22svh] sm:max-h-[28svh] md:max-h-[40vh]
+    h-auto object-contain opacity-95 select-none pointer-events-none
+  "
+/>
+    <div className="px-4 text-[10px] lg:text-[12px] text-center lg:py-2">
+      <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
+      <p>Ticaret Sicil Numarası: 78086</p>
+      <p>Mersis Numarası: 0177081335200001</p>
+      <p>Şehitkamil/Gaziantep</p>
+    </div>
+  </div>
       </div>
 
       {/* Kısa ekranlarda (≤780px) alt görseli gizle – Tailwind'e dokunmadan */}

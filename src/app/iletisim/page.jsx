@@ -38,25 +38,6 @@ function IletisimIllu({ className = "" }) {
 }
 
 export default function IletisimPage() {
-  function onSubmit(e) {
-    e.preventDefault();
-    const f = e.currentTarget;
-    const name = f.name.value.trim();
-    const phone = f.phone.value.trim();
-    const email = f.email.value.trim();
-    const message = f.message.value.trim();
-
-    const text =
-      `Merhaba, bir iletişim formu gönderildi:\n` +
-      `• Ad: ${name || "-"}\n` +
-      `• Telefon: ${phone || "-"}\n` +
-      `• E-posta: ${email || "-"}\n` +
-      `• Mesaj: ${message || "-"}`;
-
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-    window.open(url, "_blank");
-  }
-
   return (
     <section
       className={`
@@ -78,35 +59,35 @@ export default function IletisimPage() {
         {/* İçeriği dikeyde tam ortaya almak için tam yükseklik grid */}
         <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
           {/* SOL: FORM */}
-          <form onSubmit={onSubmit} className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
+          <form className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1">Adınız:</label>
+              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Adınız:</label>
               <input
                 type="text"
                 name="name"
-                className="w-full rounded-xl h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+                className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
                 required
               />
             </div>
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1">Telefon numaranız:</label>
+              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Telefon numaranız:</label>
               <input
                 type="tel"
                 name="phone"
-                className="w-full rounded-xl h-9 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+                className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
               />
             </div>
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1">e-posta adresiniz:</label>
+              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">e-posta adresiniz:</label>
               <input
                 type="email"
                 name="email"
-                className="w-full rounded-xl h-9 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+                className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
                 required
               />
             </div>
             <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1">Mesajınız:</label>
+              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Mesajınız:</label>
               <textarea
                 name="message"
                 rows={2}
