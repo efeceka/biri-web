@@ -40,17 +40,17 @@ export default function Hakkimizda() {
           </p>
           <p>
             Mobil uygulamalar öncelikli olmak üzere; iş süreçlerini
-kolaylaştıran, verimliliği artıran ve modern teknolojileri hayatın
-her alanına entegre eden çözümler geliştiriyoruz. Yalnızca mobil
-değil, farklı platformlara da yayılan ürün ve hizmetlerimizle pek
-çok sektörde operasyonel süreçleri dijitalleştiriyor, aynı zamanda
-sadeleştiriyoruz.
+            kolaylaştıran, verimliliği artıran ve modern teknolojileri hayatın
+            her alanına entegre eden çözümler geliştiriyoruz. Yalnızca mobil
+            değil, farklı platformlara da yayılan ürün ve hizmetlerimizle pek
+            çok sektörde operasyonel süreçleri dijitalleştiriyor, aynı zamanda
+            sadeleştiriyoruz.
           </p>
           <p>
             Amacımız; teknolojiyi sadece üretmek değil, aynı zamanda
-anlamlı ve sürdürülebilir biçimde işletmelere ve bireylere entegre
-etmektir. Bu doğrultuda, yalınlık ilkesinden ödün vermeden
-geleceğin teknolojilerine ışık tutan çözümler tasarlıyoruz.
+            anlamlı ve sürdürülebilir biçimde işletmelere ve bireylere entegre
+            etmektir. Bu doğrultuda, yalınlık ilkesinden ödün vermeden
+            geleceğin teknolojilerine ışık tutan çözümler tasarlıyoruz.
           </p>
         </div>
       </div>

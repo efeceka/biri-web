@@ -1,5 +1,3 @@
-// app/haberler/page.jsx
-
 export const metadata = {
   title: "Haberler | Biri Teknoloji",
 };

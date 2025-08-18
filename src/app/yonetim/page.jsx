@@ -71,47 +71,47 @@ export default function YonetimPage() {
         ${poppins.className}
       `}
     >
-      <div
-  className="
-    max-w-[1600px] mx-auto px-6 lg:px-20 h-full lg:pt-30
-    grid grid-rows-[auto_1fr_auto]
-  "
->
+        <div
+        className="
+            max-w-[1600px] mx-auto px-6 lg:px-20 h-full lg:pt-30
+            grid grid-rows-[auto_1fr_auto]
+        "
+        >
         {/* Üst mini boşluk (header'dan sonra nefes payı) */}
         <div className="h-2 md:h-1" />
 
         {/* Kartlar */}
         <div className="justify-self-center place-self-start lg:place-self-center">
-          {/* Mobil başlık */}
-          <h1 className="lg:hidden text-2xl font-extrabold text-white text-center mb-4">Yönetim</h1>
+            {/* Mobil başlık */}
+            <h1 className="lg:hidden text-2xl font-extrabold text-white text-center mb-4">Yönetim</h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-[max-content_max-content] justify-center gap-4 md:gap-20">
-            {PEOPLE.map((p) => (
-              <Card key={p.email} person={p} />
-            ))}
-          </div>
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-[max-content_max-content] justify-center gap-4 md:gap-20">
+                {PEOPLE.map((p) => (
+                <Card key={p.email} person={p} />
+                ))}
+            </div>
+            </div>
 
-        {/* Alt görsel – mobilde daha küçük, çok kısa ekranlarda gizle */}
-         <div className="self-end flex flex-col items-center pb-[env(safe-area-inset-bottom)] lg:mt-10">
-     <img
-  src="/images/yonetim/yonetim.png"
-  alt="İllüstrasyon"
-  className="
-    yonetim-illu hidden md:block
-    w-[min(70%,700px)] 
-    lg:w-[clamp(420px,46vw,760px)]
-    max-h-[22svh] sm:max-h-[28svh] md:max-h-[40vh]
-    h-auto object-contain opacity-95 select-none pointer-events-none
-  "
-/>
-    <div className="px-4 text-[10px] lg:text-[12px] text-center lg:py-2 hidden md:block">
-      <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
-      <p>Ticaret Sicil Numarası: 78086</p>
-      <p>Mersis Numarası: 0177081335200001</p>
-      <p>Şehitkamil/Gaziantep</p>
-    </div>
-  </div>
+            {/* Alt görsel – mobilde daha küçük, çok kısa ekranlarda gizle */}
+            <div className="self-end flex flex-col items-center pb-[env(safe-area-inset-bottom)] lg:mt-10">
+                <img
+                src="/images/yonetim/yonetim.png"
+                alt="İllüstrasyon"
+                className="
+                    yonetim-illu hidden md:block
+                    w-[min(70%,700px)] 
+                    lg:w-[clamp(420px,46vw,760px)]
+                    max-h-[22svh] sm:max-h-[28svh] md:max-h-[40vh]
+                    h-auto object-contain opacity-95 select-none pointer-events-none
+                "
+                />
+            <div className="px-4 text-[10px] lg:text-[12px] text-center lg:py-2 hidden md:block">
+                <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
+                <p>Ticaret Sicil Numarası: 78086</p>
+                <p>Mersis Numarası: 0177081335200001</p>
+                <p>Şehitkamil/Gaziantep</p>
+            </div>
+            </div>
       </div>
 
       {/* Kısa ekranlarda (≤780px) alt görseli gizle – Tailwind'e dokunmadan */}

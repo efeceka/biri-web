@@ -23,26 +23,24 @@ export default function Hero() {
     <section
       className="
         relative w-full
-        h-[calc(100svh-64px)]     /* MOBİL: header (64px) çıkar, scroll kalksın */
-        lg:h-screen               /* DESKTOP: eskisi gibi tam ekran */
+        h-[calc(100svh-64px)]
+        lg:h-screen
         bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
-        pt-0 lg:pt-24             /* MOBİL: padding yok; DESKTOP: mevcut padding */
+        pt-0 lg:pt-24
         overflow-hidden
       "
     >
       {/* İçerik container */}
       <div className="relative max-w-[1600px] mx-auto h-full px-6 lg:px-20">
-        {/* Metin blok */}
         <div className="h-full flex items-start lg:items-center">
           <div
             className="
               max-w-lg mx-auto lg:ml-20 text-center lg:text-center z-10
               relative lg:mt-0
-              translate-y-20 sm:translate-y-0
+              translate-y-15 md:-translate-y-15
             "
           >
             <h1 className={`${nunito.className} relative text-gray-900 leading-tight`}>
-              {/* BG sadece mobilde, metnin ARKASINDA */}
               <span className="absolute -inset-10 lg:hidden z-0 pointer-events-none">
                 <Image
                   src="/images/home/mobile-bg3.png"
@@ -54,7 +52,6 @@ export default function Hero() {
                 />
               </span>
 
-              {/* Metinler ÖNDE */}
               <span className="relative z-10 block text-3xl lg:text-5xl">
                 Teknolojinin kalbinde;
               </span>
@@ -70,7 +67,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className={`${poppins.className} text-base lg:text-lg text-[#737373] mt-5 lg:mt-2`}>
+            <p className={`${poppins.className} text-base lg:text-lg text-[#737373] mt-5 lg:mt-10`}>
               Geleceğin teknolojileri, hayatınızı bugün kolaylaştırsın!
             </p>
 
@@ -97,36 +94,36 @@ export default function Hero() {
         />
 
        
-      </div>
+         </div>
       
-      <img
-    src="/images/home/mobile-el.png"
-    alt="Mobil görsel"
-    className="
-      lg:hidden
-      pointer-events-none select-none
-      absolute bottom-0
-      left-[max(0px,env(safe-area-inset-left))]
-      w-[100svw] h-auto
-      max-w-none           /* genişliği asla kısma */
-      object-contain
-      z-0
-      
-    "
-  />
+            <img
+            src="/images/home/mobile-el.png"
+            alt="Mobil görsel"
+            className="
+            lg:hidden
+            pointer-events-none select-none
+            absolute bottom-0
+            left-[max(0px,env(safe-area-inset-left))]
+            w-[100svw] h-auto
+            max-w-none           /* genişliği asla kısma */
+            object-contain
+            z-0
+            
+            "
+        />
 
-      {/* Üst dekor (sadece masaüstü) */}
-      <img
-        src="/images/home/home-bg3.png"
-        alt="Dekor"
-        className="
-          hidden lg:block
-          absolute top-0 right-0
-          w-[clamp(160px,33%,600px)]
-          h-auto max-h-[480px]
-          select-none object-contain pointer-events-none
-        "
-      />
+        {/* Üst dekor (sadece masaüstü) */}
+        <img
+            src="/images/home/home-bg3.png"
+            alt="Dekor"
+            className="
+            hidden lg:block
+            absolute top-0 right-0
+            w-[clamp(160px,33%,600px)]
+            h-auto max-h-[480px]
+            select-none object-contain pointer-events-none
+            "
+        />
     </section>
   );
 }
