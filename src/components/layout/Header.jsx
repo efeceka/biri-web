@@ -40,7 +40,7 @@ export default function Header() {
         lg:fixed lg:inset-x-0 lg:top-0
       "
     >
-      <div className="relative max-w-[1440px] mx-auto h-full px-4 lg:px-6 flex items-center">
+      <div className="relative max-w-[1600px] mx-auto h-full px-4 lg:px-6 flex items-center">
         {/* Mobil: burger (sol) */}
         <button
         aria-label="Menüyü aç/kapat"

@@ -36,8 +36,8 @@ export default function Hero() {
           <div
             className="
               max-w-lg mx-auto lg:ml-20 text-center lg:text-center z-10
-              relative lg:mt-0
-              translate-y-15 md:-translate-y-15
+              relative 
+              translate-y-15 md:translate-y-20  lg:translate-y-15
             "
           >
             <h1 className={`${nunito.className} relative text-gray-900 leading-tight`}>
@@ -96,21 +96,21 @@ export default function Hero() {
        
          </div>
       
-            <img
-            src="/images/home/mobile-el.png"
-            alt="Mobil görsel"
-            className="
-            lg:hidden
-            pointer-events-none select-none
-            absolute bottom-0
-            left-[max(0px,env(safe-area-inset-left))]
-            w-[100svw] h-auto
-            max-w-none           /* genişliği asla kısma */
-            object-contain
-            z-0
-            
-            "
-        />
+           <img
+  src="/images/home/mobile-el.png"
+  alt="Mobil görsel"
+  className="
+    lg:hidden
+    pointer-events-none select-none
+    absolute bottom-0
+    left-[max(0px,env(safe-area-inset-left))]
+    w-[100svw] h-auto
+    max-w-none
+    max-h-[70vh]       /* <<< maksimum yüksekliği ekranın %60’ı */
+    object-contain
+    z-0
+  "
+/>
 
         {/* Üst dekor (sadece masaüstü) */}
         <img
