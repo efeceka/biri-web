@@ -61,7 +61,7 @@ export default function Hakkimizda() {
         <img
           src="/images/hakkimizda/hakkimizda-img.png"
           alt="Teknoloji Haritası"
-          className="hidden lg:block w-[clamp(360px,42vw,720px)] h-auto object-contain drop-shadow"
+          className="hidden lg:block w-[clamp(360px,42vw,720px)] h-auto object-contain drop-shadow -mr-3"
         />
 
         {/* Mobil */}
@@ -96,7 +96,7 @@ export default function Hakkimizda() {
     <img
         src="/images/home/home-bg3.png"
         alt=""
-        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto max-h-[480px] object-contain pointer-events-none"
+        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto max-h-[480px] object-contain pointer-events-none z-1000"
     />
 </section>
   );

@@ -58,13 +58,13 @@ export default function Header() {
           className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 inline-flex items-center"
         >
           <Image
-  src="/images/logo/logo-header.png"
-  alt="biri logo"
-  width={160}
-  height={50}
-  priority
-  className="h-auto w-36"   // yaklaşık 144px
-/>
+            src="/images/logo/logo-header.png"
+            alt="biri logo"
+            width={160}
+            height={50}
+            priority
+            className="h-auto w-36"   // yaklaşık 144px
+            />
         </Link>
 
         {/* Desktop: logo (sol) */}

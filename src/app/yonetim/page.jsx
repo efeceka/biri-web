@@ -38,9 +38,9 @@ function Card({ person }) {
       className={`
         rounded-[28px] bg-[#f2fcf0] text-[#545454] shadow-lg backdrop-blur-sm
         flex flex-col items-center text-center
-        w-[min(80vw,360px)] md:w-[clamp(280px,28vw,380px)]
+        w-[min(78vw,350px)] md:w-[clamp(280px,28vw,380px)]
         min-h-[220px] md:min-h-[260px]
-        px-6 md:px-3 py-8
+        px-5 md:px-3 py-5 md:py-8
         ${poppins.className}
       `}
     >
@@ -83,7 +83,7 @@ export default function YonetimPage() {
         {/* Kartlar */}
         <div className="justify-self-center place-self-start lg:place-self-center">
             {/* Mobil başlık */}
-            <h1 className="lg:hidden text-2xl font-extrabold text-white text-center mb-4">Yönetim</h1>
+            <h1 className="lg:hidden text-xl font-extrabold text-white text-center mb-4">Yönetim</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-[max-content_max-content] justify-center gap-4 md:gap-20">
                 {PEOPLE.map((p) => (
@@ -93,37 +93,29 @@ export default function YonetimPage() {
             </div>
 
             {/* Alt görsel – mobilde daha küçük, çok kısa ekranlarda gizle */}
-            <div className="self-end flex flex-col items-center pb-[env(safe-area-inset-bottom)] lg:mt-10">
-                <img
-                src="/images/yonetim/yonetim.png"
-                alt="İllüstrasyon"
-                className="
-                    yonetim-illu hidden md:block
-                    w-[min(70%,700px)] 
-                    lg:w-[clamp(420px,46vw,760px)]
-                    max-h-[22svh] sm:max-h-[28svh] md:max-h-[40vh]
-                    h-auto object-contain opacity-95 select-none pointer-events-none
-                "
-                />
-            </div>
+<div className="self-end flex flex-col items-center pb-[env(safe-area-inset-bottom)] lg:mt-10">
+  <img
+    src="/images/yonetim/yonetim.png"
+    alt="İllüstrasyon"
+    className="
+      yonetim-illu block
+      w-[80vw] max-w-[360px]    /* mobilde orantılı küçültme */
+      sm:w-[min(70%,700px)] 
+      lg:w-[clamp(420px,46vw,760px)]
+      max-h-[22svh] sm:max-h-[28svh] md:max-h-[40vh]
+      h-auto object-contain opacity-95 select-none pointer-events-none
+    "
+  />
+</div>
       </div>
 
-      {/* Kısa ekranlarda (≤780px) alt görseli gizle – Tailwind'e dokunmadan */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            @media (max-height: 500px) {
-              .yonetim-illu { display: none !important; }
-            }
-          `,
-        }}
-      />
+      
 
       {/* Sağ üst dekor (masaüstü) */}
       <img
         src="/images/home/home-bg3.png"
         alt=""
-        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto object-contain pointer-events-none"
+        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto object-contain pointer-events-none z-1000"
       />
     </section>
   );

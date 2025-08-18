@@ -36,8 +36,8 @@ export default function HaberlerPage() {
       <img
         src="/images/home/home-bg3.png"
         alt=""
-        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,50%,600px)] h-auto object-contain pointer-events-none"
-      />
+        className="hidden lg:block absolute top-0 right-0 w-[clamp(160px,33%,600px)] h-auto max-h-[480px] object-contain pointer-events-none z-1000"
+    />
     </section>
   );
 }
