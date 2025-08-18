@@ -42,16 +42,15 @@ export default function Header() {
     >
       <div className="relative max-w-[1440px] mx-auto h-full px-4 lg:px-6 flex items-center">
         {/* Mobil: burger (sol) */}
-        {/* Mobil: burger (sol) */}
-<button
-  aria-label="Menüyü aç/kapat"
-  onClick={() => setOpen((s) => !s)}
-  className="lg:hidden absolute left-4 top-1/2 -translate-y-1/2 inline-flex flex-col justify-center h-9 w-9"
->
-  <span className="block rounded-2xl h-[4px] w-8 bg-white mb-[4px]" />
-  <span className="block rounded-2xl h-[4px] w-8 bg-white mb-[4px]" />
-  <span className="block rounded-2xl h-[4px] w-8 bg-white" />
-</button>
+        <button
+        aria-label="Menüyü aç/kapat"
+        onClick={() => setOpen((s) => !s)}
+        className="lg:hidden absolute left-4 top-1/2 -translate-y-1/2 inline-flex flex-col justify-center h-9 w-9"
+        >
+        <span className="block rounded-2xl h-[4px] w-8 bg-white mb-[4px]" />
+        <span className="block rounded-2xl h-[4px] w-8 bg-white mb-[4px]" />
+        <span className="block rounded-2xl h-[4px] w-8 bg-white" />
+        </button>
 
         {/* Mobil: logo (sağ) */}
         <Link
