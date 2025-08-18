@@ -70,9 +70,9 @@ export default function Hakkimizda() {
   alt="Teknoloji Haritası"
   className="
     block lg:hidden
-    w-[80vw] max-w-[400px]   /* genişliği %80, max genişlik 400px */
+    w-[92vw] max-w-[480px]   /* genişliği %92, max genişlik 480px */
     h-auto object-contain
-    ml-auto -mr-1
+    ml-auto -mr-1 mt-5
   "
 />
       </div>
@@ -81,7 +81,7 @@ export default function Hakkimizda() {
 
   <div
     className="
-      px-6 py-3 
+      px-6 pb-1 
       text-[7px] leading-tight text-left 
       lg:text-[12px] lg:leading-snug lg:px-18 lg:pb-6 lg:ml-11
     "
