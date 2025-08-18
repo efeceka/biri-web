@@ -147,12 +147,43 @@ export default function IletisimPage() {
 
         {/* Küçük yazı */}
        {/* Küçük yazı sadece masaüstünde */}
-        <div className="hidden md:block mt-4 text-[9px] text-gray-600 leading-snug text-left">
-        <p className="m-0">Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
-        <p className="m-0">Ticaret Sicil Numarası: 78086</p>
-        <p className="m-0">Mersis Numarası: 0177081335200001</p>
-        <p className="m-0">Şehitkamil/Gaziantep</p>
-        </div>
+       <div className="hidden md:flex items-start justify-between mt-4 text-[9px] text-gray-600 leading-snug">
+  {/* Yazılar */}
+  <div>
+    <p className="m-0">Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
+    <p className="m-0">Ticaret Sicil Numarası: 78086</p>
+    <p className="m-0">Mersis Numarası: 0177081335200001</p>
+    <p className="m-0">Şehitkamil/Gaziantep</p>
+  </div>
+
+  {/* İkonlar */}
+  <div className="flex gap-3 ml-4">
+    <a
+      href="https://instagram.com/..."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Instagram"
+    >
+      <img
+        src="/images/icons/instagram.png"
+        alt="Instagram"
+        className="w-8 h-8 opacity-80 hover:opacity-100 transition"
+      />
+    </a>
+    <a
+      href="https://linkedin.com/company/..."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="LinkedIn"
+    >
+      <img
+        src="/images/icons/linkedin.png"
+        alt="LinkedIn"
+        className="w-8 h-8 opacity-80 hover:opacity-100 transition"
+      />
+    </a>
+  </div>
+</div>
         </form>
 
           {/* Sağ: Metin + İllüstrasyon */}

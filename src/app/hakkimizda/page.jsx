@@ -79,18 +79,46 @@ export default function Hakkimizda() {
     </div>
   </div>
 
-  <div
-    className="
-      px-6 pb-1 
-      text-[7px] leading-tight text-left 
-      lg:text-[10px] lg:leading-snug lg:px-18 lg:py-3 lg:ml-11
-    "
-    >
-    <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
-    <p>Ticaret Sicil Numarası: 78086</p>
-    <p>Mersis Numarası: 0177081335200001</p>
-    <p>Şehitkamil/Gaziantep</p>
+  <div className="px-6 pb-1 lg:px-18 lg:py-3 lg:ml-11">
+  {/* Yazılar + ikonlar aynı satırda */}
+  <div className="inline-flex items-start gap-3 max-w-full">
+    {/* Yazılar */}
+    <div className="text-[7px] leading-tight lg:text-[10px] lg:leading-snug">
+      <p className="m-0">Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
+      <p className="m-0">Ticaret Sicil Numarası: 78086</p>
+      <p className="m-0">Mersis Numarası: 0177081335200001</p>
+      <p className="m-0">Şehitkamil/Gaziantep</p>
+    </div>
+
+    {/* İkonlar */}
+    <div className="flex ml-14 items-end lg:items-center gap-2 pt-[2px]">
+      <a
+        href="https://instagram.com/..."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+      >
+        <img
+          src="/images/icons/instagram.png"
+          alt="Instagram"
+          className="w-7 h-7 lg:w-9 lg:h-9 opacity-80 hover:opacity-100 transition"
+        />
+      </a>
+      <a
+        href="https://linkedin.com/company/..."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="LinkedIn"
+      >
+        <img
+          src="/images/icons/linkedin.png"
+          alt="LinkedIn"
+          className="w-7 h-7 lg:w-9 lg:h-9 opacity-80 hover:opacity-100 transition"
+        />
+      </a>
+    </div>
   </div>
+</div>
 
     {/* DEKOR (masaüstü) */}
     <img
