@@ -83,7 +83,7 @@ export default function Hakkimizda() {
     className="
       px-6 pb-1 
       text-[7px] leading-tight text-left 
-      lg:text-[10px] lg:leading-snug lg:px-18 lg:pb-6 lg:ml-11
+      lg:text-[10px] lg:leading-snug lg:px-18 lg:py-3 lg:ml-11
     "
     >
     <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
