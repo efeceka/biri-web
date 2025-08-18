@@ -24,7 +24,7 @@ export default function Hakkimizda() {
   "
 >
   {/* ORTA BLOK (metin + görsel) */}
-  <div className="flex-1 flex items-start">
+  <div className="flex-1 flex items-start lg:items-center">
     <div className="max-w-[1440px] mx-auto lg:px-0 lg:py-12 grid grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center lg:ml-18 w-full">
       
       {/* SOL: METİN */}
@@ -66,15 +66,15 @@ export default function Hakkimizda() {
 
         {/* Mobil */}
         <img
-  src="/images/hakkimizda/hakkimizda-img.png"
-  alt="Teknoloji Haritası"
-  className="
-    block lg:hidden
-    w-[92vw] max-w-[480px]   /* genişliği %92, max genişlik 480px */
-    h-auto object-contain
-    ml-auto -mr-1 mt-5
-  "
-/>
+        src="/images/hakkimizda/hakkimizda-img.png"
+        alt="Teknoloji Haritası"
+        className="
+            block lg:hidden
+            w-[92vw] max-w-[480px]   /* genişliği %92, max genişlik 480px */
+            h-auto object-contain
+            ml-auto -mr-1 mt-5
+        "
+        />
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@ export default function Hakkimizda() {
     className="
       px-6 pb-1 
       text-[7px] leading-tight text-left 
-      lg:text-[12px] lg:leading-snug lg:px-18 lg:pb-6 lg:ml-11
+      lg:text-[10px] lg:leading-snug lg:px-18 lg:pb-6 lg:ml-11
     "
     >
     <p>Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>

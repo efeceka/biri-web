@@ -45,7 +45,6 @@ export default function IletisimPage() {
         lg:min-h-screen
         bg-gradient-to-r from-[#cbfdd8] to-[#95bafe]
         pt-0 lg:pt-30
-        overflow-hidden
         ${poppins.className}
       `}
     >
@@ -59,60 +58,70 @@ export default function IletisimPage() {
           </h2>
 
           {/* Sol: Form */}
-          <form className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
-            <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Adınız:</label>
-              <input
-                type="text"
-                name="name"
-                className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
-                required
-              />
-            </div>
+          {/* Sol: Form */}
+        <form className="space-y-5 w-full max-w-[400px] mx-auto text-center lg:text-left">
+        <div className="text-left">
+            <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Adınız:</label>
+            <input
+            type="text"
+            name="name"
+            className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+            required
+            />
+        </div>
 
-            <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Telefon numaranız:</label>
-              <input
-                type="tel"
-                name="phone"
-                className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
-              />
-            </div>
+        <div className="text-left">
+            <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Telefon numaranız:</label>
+            <input
+            type="tel"
+            name="phone"
+            className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+            />
+        </div>
 
-            <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">e-posta adresiniz:</label>
-              <input
-                type="email"
-                name="email"
-                className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
-                required
-              />
-            </div>
+        <div className="text-left">
+            <label className="block text-gray-700 font-semibold mb-1 md:mb-2">e-posta adresiniz:</label>
+            <input
+            type="email"
+            name="email"
+            className="w-full rounded-xl h-9 lg:h-10 px-5 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300"
+            required
+            />
+        </div>
 
-            <div className="text-left">
-              <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Mesajınız:</label>
-              <textarea
-                name="message"
-                rows={2}
-                className="w-full rounded-2xl px-5 py-4 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300 resize-none"
-                required
-              />
-            </div>
+        <div className="text-left">
+            <label className="block text-gray-700 font-semibold mb-1 md:mb-2">Mesajınız:</label>
+            <textarea
+            name="message"
+            rows={2}
+            className="w-full rounded-2xl px-5 py-4 bg-white/95 shadow outline-none ring-0 focus:ring-2 focus:ring-violet-300 resize-none"
+            required
+            />
+        </div>
 
-            <div className="flex justify-center lg:justify-start">
-              <button
-                type="submit"
-                className="
-                  inline-flex items-center justify-center gap-2
-                  rounded-full bg-[#1fb25a] text-white font-semibold
-                  px-6 md:px-8 h-10 md:h-12 shadow hover:brightness-110 active:scale-[.99]
-                  transition
-                "
-              >
-                GÖNDER <span className="inline-block translate-y-[1px]">›</span>
-              </button>
-            </div>
-          </form>
+        <div className="flex justify-center lg:justify-start">
+            <button
+            type="submit"
+            className="
+                inline-flex items-center justify-center gap-2
+                rounded-full bg-[#1fb25a] text-white font-semibold
+                px-6 md:px-8 h-10 md:h-12 shadow hover:brightness-110 active:scale-[.99]
+                transition
+            "
+            >
+            GÖNDER <span className="inline-block translate-y-[1px]">›</span>
+            </button>
+        </div>
+
+        {/* Küçük yazı */}
+       {/* Küçük yazı sadece masaüstünde */}
+        <div className="hidden md:block mt-4 text-[9px] text-gray-600 leading-snug text-left">
+        <p className="m-0">Ticari Unvan: Biri İleri Teknoloji Bilişim Sanayi ve Ticaret A.Ş.</p>
+        <p className="m-0">Ticaret Sicil Numarası: 78086</p>
+        <p className="m-0">Mersis Numarası: 0177081335200001</p>
+        <p className="m-0">Şehitkamil/Gaziantep</p>
+        </div>
+        </form>
 
           {/* Sağ: Metin + İllüstrasyon */}
           <div className="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
